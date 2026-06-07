@@ -25,13 +25,13 @@ const _sortedPrefixes = [..._cardPrefixMap.keys()].sort(
 );
 
 // --- IBAN code index ---
-// When multiple banks share the same ibanCode (Blu Bank re-uses Saman's "056"),
-// only the first entry encountered wins so Saman is returned for IBAN lookups.
-// Blu Bank has ibanCode: null and is therefore excluded.
+// Each bank can have multiple ibanCodes. First entry per code wins when codes overlap.
 const _ibanCodeMap = new Map();
 for (const bank of banks) {
-  if (bank.ibanCode !== null && !_ibanCodeMap.has(bank.ibanCode)) {
-    _ibanCodeMap.set(bank.ibanCode, bank);
+  for (const code of bank.ibanCode) {
+    if (!_ibanCodeMap.has(code)) {
+      _ibanCodeMap.set(code, bank);
+    }
   }
 }
 

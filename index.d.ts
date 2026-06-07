@@ -6,10 +6,10 @@ export interface Bank {
   /** Persian/Farsi name */
   nameFa: string;
   /**
-   * 3-digit IBAN bank code used in Iranian Sheba numbers (positions 4–6).
-   * null when the bank shares another bank's IBAN code (e.g. Blu Bank → Saman).
+   * 3-digit IBAN bank codes used in Iranian Sheba numbers (positions 4–6).
+   * Empty array when the bank has no distinct IBAN code (e.g. Blu Bank).
    */
-  ibanCode: string | null;
+  ibanCode: string[];
   /** Card number prefixes (6 or 8 digits) that belong to this bank. */
   cardPrefixes: string[];
   /**
