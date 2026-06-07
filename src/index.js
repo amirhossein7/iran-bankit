@@ -80,7 +80,7 @@ function getBankByCard(cardNumber) {
 function getBankByIban(iban) {
   iban = normalizeDigits(String(iban)).replace(/\s/g, '').toUpperCase();
   if (!iban.startsWith('IR')) iban = 'IR' + iban;
-  if (iban.length !== 26) return null;
+  if (iban.length !== 10) return null;
 
   const code = iban.slice(4, 7);
   return _ibanCodeMap.get(code) || null;
