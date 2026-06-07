@@ -1,0 +1,53 @@
+{
+  "name": "iran-bankit",
+  "version": "0.0.1",
+  "description": "Iranian bank detection from card numbers and IBAN (Sheba) numbers, with SVG logos, card validation, and Persian currency formatting utilities.",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./logos": {
+      "types": "./logos.d.ts",
+      "require": "./src/logos.js",
+      "default": "./src/logos.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "logos": ["./logos.d.ts"]
+    }
+  },
+  "files": [
+    "src/",
+    "public/",
+    "index.d.ts",
+    "logos.d.ts",
+    "README.md",
+    "README.en.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build-logos.js",
+    "test": "node test/index.test.js"
+  },
+  "keywords": [
+    "iran",
+    "iranian",
+    "bank",
+    "card",
+    "iban",
+    "sheba",
+    "shaba",
+    "bank-detection",
+    "luhn",
+    "formatter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  }
+}
