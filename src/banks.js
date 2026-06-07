@@ -76,8 +76,8 @@ const banks = [
     id: 'sepah',
     nameEn: 'Bank Sepah',
     nameFa: 'سپه',
-    ibanCode: ['015', '062', '063', '065'],
-    cardPrefixes: ['589210', '639370', '505801', '639370', '636949', '627381', '639599', '636214'],
+    ibanCode: ['015', '063', '065'],
+    cardPrefixes: ['589210', '639370', '505801', '639370', '636949', '627381', '639599'],
   },
   {
     id: 'keshavarzi',
@@ -90,8 +90,8 @@ const banks = [
     id: 'meli',
     nameEn: 'Bank Melli Iran',
     nameFa: 'ملی ایران',
-    ibanCode: ['017'],
-    cardPrefixes: ['603799'],
+    ibanCode: ['017', '062'],
+    cardPrefixes: ['603799', '636214'],
   },
   {
     id: 'tejarat',
